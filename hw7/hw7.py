@@ -60,15 +60,15 @@ plate_top = int(N/2) + int(d/h/2) + 5
 
 for i in range(plate_left, plate_right+1):
     # horizontal side
-    box(pos=vec(i*h, plate_top*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
-    box(pos=vec(i*h, plate_bottom*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
+    # box(pos=vec(i*h, plate_top*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
+    # box(pos=vec(i*h, plate_bottom*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
     Q += h*(Ey[i, plate_top])
     Q += h*(-Ey[i, plate_bottom])
 
 for i in range(plate_bottom, plate_top+1):
     # vertical side
-    box(pos=vec(plate_left*h, i*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
-    box(pos=vec(plate_right*h, i*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
+    # box(pos=vec(plate_left*h, i*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
+    # box(pos=vec(plate_right*h, i*h, h/10), length = h, height= h, width = h/10, color=color.cyan)
     Q += h*(Ex[plate_right, i])
     Q += h*(-Ex[plate_left, i])
 
